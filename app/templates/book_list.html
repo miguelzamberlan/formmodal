@@ -1,0 +1,10 @@
+{% for book in books %}
+<tr id="book-{{ book.pk }}" class="book-row">
+  <td>{{ book.title }}</td>
+  <td>{{ book.year }}</td>
+  <td>{{ book.rating }}</td>
+  <td>
+    <button class="btn btn-primary btn-sm" hx-get="{% url 'edit_book' pk=book.pk %}" hx-target="#dialog">Editar</button>
+  </td>
+</tr>
+{% endfor %}

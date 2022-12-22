@@ -1,0 +1,6 @@
+<select id="select" class="form-select" aria-label="Escolha dos livros" >
+    <option {% if selecionado == 0 %} selected {% endif %}>Escolha o livro</option>
+    {% for book in books %}
+        <option value="{{ book.id }}" {% if selecionado == book.id %} selected {% endif %}>{{ book.title }}</option>
+    {% endfor %}
+</select>
