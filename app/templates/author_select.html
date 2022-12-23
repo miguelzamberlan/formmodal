@@ -1,0 +1,4 @@
+    <option {% if selecionado == 0 %} selected {% endif %}>Escolha o autor</option>
+    {% for author in authors %}
+        <option value="{{ author.id }}">{{ author.name }}</option>
+    {% endfor %}

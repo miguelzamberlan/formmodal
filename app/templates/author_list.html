@@ -1,0 +1,9 @@
+{% for author in authors %}
+<tr id="book-{{ author.pk }}" class="book-row">
+  <td>{{ author.name }}</td>
+  <td>
+{#    <a class="btn btn-danger" href="{% url 'remove_author' author.pk %}">Remover</a>#}
+      <button type="button" class="btn btn-danger"  hx-get="{% url 'remove_author' pk=author.pk %}" hx-confirm="Confirma exclusão?">Remove</button>
+  </td>
+</tr>
+{% endfor %}

@@ -4,7 +4,7 @@
   <td>{{ book.year }}</td>
   <td>{{ book.rating }}</td>
   <td>
-    <button class="btn btn-primary btn-sm" hx-get="{% url 'edit_book' pk=book.pk %}" hx-target="#dialog">Editar</button>
+    <a class="btn btn-danger" href="{% url 'remove_book' book.pk %}">Remover</a>
   </td>
 </tr>
 {% endfor %}
