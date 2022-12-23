@@ -3,7 +3,7 @@
   <td>{{ author.name }}</td>
   <td>
 {#    <a class="btn btn-danger" href="{% url 'remove_author' author.pk %}">Remover</a>#}
-      <button type="button" class="btn btn-danger"  hx-get="{% url 'remove_author' pk=author.pk %}" hx-confirm="Confirma exclusão?">Remove</button>
+      <button type="button" class="btn btn-danger"  hx-get="{% url 'remove_author' pk=author.pk %}" hx-confirm="Confirma exclusão?">Remover</button>
   </td>
 </tr>
 {% endfor %}
